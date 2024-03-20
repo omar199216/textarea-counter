@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+#sendBtn{
+    width: 100%;
+    background-color: goldenrod;
+    border : sandybrown 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+   display: none;
+}
+
+.container{
+    width: min-content;
+}
+
+.compteur{
+ border: 2px solid salmon;
+height: 50px;
+border-radius: 10px;
+display: inline-block;
+
+}
+.limiteur{
+    border: 2px solid goldenrod;
+   
+   height: 50px;
+   border-radius: 10px;
+   display: inline-block;
+   }
+   textarea{
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px solid goldenrod;
+   }
+
+   .limiteur,.compteur{
+    text-align: center;
+color : orange;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: large;
+letter-spacing: 2px;
+vertical-align: middle;
+line-height: 50px;
+width: 30%;
+   }
+
+body{
+    background-color: #333;
+    display: flex;
+    justify-content: center; 
+    height: 100vh;
+    overflow: hidden;
+    align-items: center; 
+}

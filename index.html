@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Text Counter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="compteur">
+        <span id="lenCompteur">0</span>
+      </div>
+      <div class="limiteur">
+        <span id="lenLimiteur">250</span>
+      </div>
+      <textarea
+        id="message"
+        cols="60"
+        rows="10"
+        onkeydown="letter()"
+      ></textarea>
+      <button id="sendBtn">Envoyer</button>
+    </div>
+    <script>
+      var textIn = document.getElementById("message");
+      var compteur = document.getElementById("lenCompteur");
+      var limiteur = document.getElementById("lenLimiteur");
+      var sendBtn = document.getElementById("sendBtn");
+      var maxLenght = 249;
+      function letter() {
+        if (limiteur.innerHTML > 0) {
+          compteur.innerHTML = textIn.value.length;
+          limiteur.innerHTML = maxLenght - textIn.value.length;
+          sendBtn.style.display = "none";
+        } else {
+          textIn.value = textIn.value.substring(0, maxLenght);
+          sendBtn.style.display = "inline";
+        }
+      }
+    </script>
+  </body>
+</html>
